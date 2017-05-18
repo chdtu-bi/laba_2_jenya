@@ -1,0 +1,49 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdn.rawgit.com/yegor256/tacit/gh-pages/tacit-0.8.1.min.css"/>
+	<style type="text/css">
+	   .main {
+	    padding: 5px;
+	    padding-right: 20px;
+
+	    width: 10%;
+	  	margin: 0 auto;
+	   }
+	   #res {
+		position:relative;
+    	top:15%; 
+    	left:15%;
+	   }
+	</style>
+    <title>Laba6</title>
+</head>
+<body>
+<div class="main">
+formula: <img src="http://2mb.ru/wp-content/plugins/wpmathpub/phpmathpublisher/img/math_991_04a2e6073304f3744138e7d989a81e27.png" width="80">
+<hr>
+a: <input type="number" id="a"><br>
+<hr>
+b: <input type="number" id="b"><br>
+<hr>
+c: <span id="resData"></span><br>
+<hr>
+<button id="res">calculate</button>
+</div>
+
+<script>
+let res = document.getElementById("res");
+
+res.onclick = () => {
+	let a = document.getElementById("a").value;
+	let b = document.getElementById("b").value;
+	document.getElementById('resData').innerHTML = Math.sqrt(Math.pow(a,2) + Math.pow(b,2)).toFixed(2);
+}
+</script>
+
+</body>
+</html>
